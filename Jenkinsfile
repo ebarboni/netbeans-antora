@@ -25,14 +25,14 @@ pipeline {
                     sh 'npm --cache=.cache/npm run gulp -- bundle'
                 }
                 archiveArtifacts artifacts: 'uibuild/**/*'
-                sh 'npm run clean-install'
+/*                sh 'npm run clean-install'
                 sh 'npm run build-noclean'
                 dir('build/site') {
 		  sh 'git add .'
 		  sh 'echo `git commit -m "site build"`'
                   sh 'git status'			  
                   sh 'git push https://gitbox.apache.org/repos/asf/netbeans-website.git asf-site'
-		}
+*/		}
                 
             }
         }
