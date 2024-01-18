@@ -5,7 +5,7 @@
         "clean-install": "rm -rf node_modules/ .cache/ package-lock.json;npm i --cache=.cache/npm",
         "plain-install": "npm i --cache=.cache/npm",
         "build": "node_modules/.bin/antora antora-playbook.yml --fetch --clean",
-        "build-noclean": "node_modules/.bin/antora antora-playbook.yml --fetch"
+        "build-noclean": "node_modules/.bin/antora antora-playbook.yml --fetch --stacktrace"
     },
     "devDependencies": {
         "@antora/cli": "3.1.7",
