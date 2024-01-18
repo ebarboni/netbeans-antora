@@ -25,9 +25,9 @@ pipeline {
                     sh 'npm --cache=.cache/npm run gulp -- bundle'
                 }
                 archiveArtifacts artifacts: 'uibuild/**/*.zip'
-/*                sh 'npm run clean-install'
+                sh 'npm run clean-install'
                 sh 'npm run build-noclean'
-                dir('build/site') {
+/*                dir('build/site') {
 		  sh 'git add .'
 		  sh 'echo `git commit -m "site build"`'
                   sh 'git status'			  
