@@ -24,7 +24,7 @@ pipeline {
                     sh 'npm --cache=.cache/npm install '
                     sh 'npm --cache=.cache/npm run gulp -- bundle'
                 }
-                archiveArtifacts artifacts: 'uibuild/**/*.zip'
+                archiveArtifacts artifacts: 'uibuild/**/*.*'
                 sh 'npm run clean-install'
                 sh 'npm run build-noclean'
 /*                dir('build/site') {
